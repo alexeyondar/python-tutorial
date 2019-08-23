@@ -8,14 +8,13 @@ connection = sqlite3.connect("test.db")
 # permite ejecutar
 # sentencias sql en la base de datos
 cursor = connection.cursor()
+cursor.execute("DROP TABLE Personas")
 cursor.execute("CREATE TABLE Personas (Nombres TEXT, Apellidos TEXT, FechaNacimiento DATE)")
 
 fechaNacimiento = datetime(1981,8,6)
 
 # Insertaré datos a la tabla Personas
 cursor.execute("INSERT INTO Personas VALUES('Mauricio', 'Montoya Medrano', '{}')".format(fechaNacimiento.strftime("%d/%m/%Y")))
-
-connection.commit()
 
 # Insertaré varios registros
 personas = [
@@ -26,5 +25,11 @@ personas = [
 
 cursor.executemany("INSERT INTO Personas VALUES(?,?,?)", personas)
 connection.commit()
+
+# Selecciono todos los registros de la base de datos
+cursor.execute("SELECT * FROM Personas")
+response = cursor.fetchall()
+for persona in response:
+    print(persona)
 
 connection.close()
