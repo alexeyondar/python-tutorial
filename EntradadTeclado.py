@@ -1,5 +1,5 @@
 saludo = "Hola, ingrese los datos de acceso"
-print(saludo);
+print(saludo)
 print("Ingrese su nombre:")
 nombres = input()
 print("Ingrese su edad")

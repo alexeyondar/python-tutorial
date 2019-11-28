@@ -2,7 +2,7 @@ import sqlite3
 from datetime import datetime
 
 # Abro la base de datos si existe o la creo
-connection = sqlite3.connect("test.db")
+connection = sqlite3.connect("B:\\Developer\\Phyton\\Tutorial\\test.db")
 
 # Voy a crear tablas, para eso uso el método cursor de la conexion, este nos
 # permite ejecutar

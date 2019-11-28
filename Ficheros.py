@@ -1,8 +1,8 @@
 import os
 import pickle
 
-filename = "Fichero.txt"
-filenameAux = "FicheroAux.txt"
+filename = "B:\\Developer\\Phyton\\Tutorial\\Fichero.txt"
+filenameAux = "B:\\Developer\\Phyton\\Tutorial\\FicheroAux.txt"
 
 # Abro el fichero en modo escritura (r) de texto (t)
 file = open(filename, "r")
@@ -32,7 +32,7 @@ file.close()
 file = open(filenameAux, "r")
 lineas = file.read()
 print(lineas)
-file.close();
+file.close()
 
 # Elimino el fichero auxiliar
 if(file.closed):
@@ -45,7 +45,7 @@ list = ["Verde", "Blanco", "Negro", "Rojo", "Azul"]
 
 # Serializo el objeto list y lo imprimo en el archivo binario
 pickle.dump(list, file)
-file.close();
+file.close()
 
 # Deserializo el objeto pickle
 file = open(filenameBinario, "rb")
