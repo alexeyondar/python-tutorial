@@ -10,7 +10,7 @@ WSGI y FastCGI
 
     pip install wfastcgi
 
-Habilitemos el wfastcgi ejecutando el archivo `wfastcgi-enable.exe` ubicado en el directorio C:\python\Scripts
+Habilitemos el wfastcgi ejecutando siguiente comando `wfastcgi-enable` desde una consola ejecutandola como administrador o ejecutando el archivo `wfastcgi-enable.exe` ubicado en el directorio C:\python\Scripts como administrador
 
 Copiamos el archivo `wfastcgi.py` ubicado en el directorio *C:\python\Lib\site-packages* a la ruta donde están ubicadas las aplicaciones del IIS, en este caso sería *C:\inetpub\www\mysite*
 
